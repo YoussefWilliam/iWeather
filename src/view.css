@@ -1,0 +1,105 @@
+.mage {
+    flex:1
+}
+.container {
+      flex: 1;
+      padding: 20;
+      margin-top: 65;
+      background: '#f2f2f2';
+}
+.horContainer1 {
+      flex-Direction: 'row';
+      margin-bottom: 20;
+}
+.horContainer2 {
+      flex-direction: 'row';
+      align-Items: 'flex-start';
+}
+.vertContainer {
+      flex: 1,;
+      margin-bottom:10;
+      margin-top: 10;
+      background-color: '#cccccc';
+      padding: 15;
+}
+.dateTime {
+      font-size: 14;
+      text-align: 'left';
+      margin-bottom: 20;
+      color: '#9a9a9a';
+}
+.cityName {
+      font-size: 25;
+      text-align: 'left';
+}
+.curTemp {
+      font-size: 60;
+      font-weight: 'bold';
+}
+.celcius {
+      margin-left: 2;
+}
+.desc {
+      font-size: 20;
+      color: 'blue';
+}
+.icon {
+     width: 150;
+     height: 150;
+     margin-right: 15;
+}
+.degree {
+    border-color: 'black';
+    background-color: 'transparent';
+    border-width: 1;
+}
+.image {
+    flex:1
+};
+.searchContainer {
+      flex: 1;
+      margin-top: 65;
+      align-Items: 'stretch';
+      background-color: 'transparent';
+}
+.innerContainer {
+      
+      background: url("images/container.jpg") ;
+      align-Items: 'center';
+      justify-content: 'flex-start';
+      flex-direction:'column';
+      padding: 20;
+}
+.text {
+      margin-top: 80;
+      font-size: 28;
+      text-align: 'center';
+      color: 'white';
+      background-color: 'transparent';
+}
+.textInput {
+      height: 36;
+      margin-top: 20;
+      margin-bottom: 10;
+      padding: 4;
+      font-size: 18;
+      border-width: 1;
+      border-color: '#0ea378';
+      background-color: 'white';
+      border-radius: 3;
+      color: '#48BBEC';
+}
+.button {
+      height: 36;
+      background-color: '#6BBD6D';
+      border-radius: 3;
+      align-self: 'stretch';
+      justify-content: 'center';
+      margin-bottom: 10;
+}
+.buttonText {
+      font-size: 18;
+      font-weight: 'bold';
+      color: 'white';
+      align-self: 'center';
+}
