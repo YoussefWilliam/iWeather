@@ -31,10 +31,9 @@ class SelectedListItem extends React.Component {
         <List component="nav">
           <ListItem
             button
-          //  selected={this.props.index}
           >
             <ListItemText primary={this.props.primary} />
-          
+           <h3> &#8451;</h3>
           </ListItem>
           <Divider/>
 

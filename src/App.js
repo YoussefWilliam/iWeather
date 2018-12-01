@@ -40,26 +40,6 @@ class App extends React.Component {
       openF:false,
     }
   }
-  // getCurrentLocation (){
-  //   var output = document.getElementById("out");
-  //   var x;
-  //   var y;
-    
-  //   if (!navigator.geolocation){
-  //     output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-  //     return;
-  //   }
-  //   function success(position) {
-  //     const latitude  = position.coords.latitude;
-  //     const longitude = position.coords.longitude;
-  //     x=latitude;
-  //     y=longitude;
-  //     console.log(x,y);
-  //   }
-  //   console.log(x,y);
-
-  //   navigator.geolocation.getCurrentPosition(success);
-  // }
 
   componentDidMount(){
     this.getSavedWeather(); 
@@ -73,18 +53,19 @@ class App extends React.Component {
     }))
     .catch(err => console.error(err))
   }
-
+  
   addWeather = _=>{
     const city =this.state.city;
     const country=this.state.country;
     const temprature=this.state.temprature;
-    if(city&&country&&temprature){
+    if(city&&country&&temprature){      
       fetch(`http://localhost:4000/data/add?city=${city}&country=${country}&temprature=${temprature}`)
       .then(response => response.json())
       .then(this.componentDidMount())
       .catch(err => console.error(err))
       this.setState({
         openS:true
+        
       })
 
     }else{
@@ -99,7 +80,8 @@ class App extends React.Component {
       e.preventDefault();
       const city= this.state.location.city;
       const country=this.state.location.country;
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+      const api_call =
+      await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
       const data = await api_call.json();
       console.log(data);
       if(city&&country){
@@ -151,8 +133,7 @@ class App extends React.Component {
     
   <div key={_id}>
   <SelectedListItem
-    primary={`${city},${country},${temprature}`}
-  />
+    primary={`${city},${country},${temprature}`}/>
   </div>
 
   render() {
@@ -195,9 +176,7 @@ class App extends React.Component {
                 />
           </div>
           <div className="column">
-                <Database 
-                  check={this.state.elementsIn}
-                />
+                <Database />
                 {this.state.array.map(this.renderWeather)}
             </div>
         </div>
