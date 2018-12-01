@@ -14,7 +14,10 @@ but for now you just need this command and that's it.
 
 Yarn is way faster and reliable and it caches faster and that what we need to run our server for the database, open [https://www.npmjs.com/package/yarn] and check all the info needed.
 
-// here joe, delete this comment and write after it. 
+### `nodemon index.js`
+
+That's the way for running the backend or the server for the project, which enables the server.<br>
+It connects the server on port 4000, so in order to check the connection, open [http://localhost:4000](http://localhost:4000) to view it on the browser. 
 
 # Part 2: React Dependencies
 
