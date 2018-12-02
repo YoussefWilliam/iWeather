@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2018 at 01:01 PM
+-- Generation Time: Dec 01, 2018 at 09:52 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -40,9 +40,10 @@ CREATE TABLE `my_weather` (
 --
 
 INSERT INTO `my_weather` (`id`, `city`, `country`, `temprature`) VALUES
-(17, 'London', 'GB', 12.09),
-(18, 'London', 'GB', 12.91),
-(19, 'Cairo', 'EG', 18);
+(12, 'London', 'GB', 11.4),
+(13, 'Cairo', 'EG', 17),
+(14, 'London', 'GB', 11.4),
+(15, 'London', 'GB', 11.4);
 
 --
 -- Indexes for dumped tables
@@ -52,7 +53,7 @@ INSERT INTO `my_weather` (`id`, `city`, `country`, `temprature`) VALUES
 -- Indexes for table `my_weather`
 --
 ALTER TABLE `my_weather`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`,`city`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -62,7 +63,7 @@ ALTER TABLE `my_weather`
 -- AUTO_INCREMENT for table `my_weather`
 --
 ALTER TABLE `my_weather`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

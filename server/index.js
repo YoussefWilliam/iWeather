@@ -4,7 +4,7 @@ const mysql =require('mysql');
 
 const app = express();
 
-const selectAllWeather_QUERY = 'SELECT * FROM my_weather';
+const selectAllWeather_QUERY = 'SELECT DISTINCT city,country,temprature FROM my_weather ';
 
 
 const connection = mysql.createConnection({
@@ -29,8 +29,9 @@ app.get('/',(req,res)=>{
 
 app.get('/data/add',(req,res) =>{
     const {city,country,temprature} =req.query;
-    const insertWeather_QUERY = `INSERT INTO my_weather (city,country,temprature) VALUES ('${city}', '${country}','${temprature}')`;
-    connection.query(insertWeather_QUERY,(err,result) =>{
+    const insertWeather_QUERY = 
+   `INSERT INTO my_weather (city,country,temprature) VALUES ('${city}', '${country}','${temprature}');`
+   connection.query(insertWeather_QUERY,(err,result) =>{
     if(err){
         return res.send(err);
     }else{
@@ -38,6 +39,7 @@ app.get('/data/add',(req,res) =>{
     }
     });
 })
+
 
 app.get('/data',(req,res)=>{
     connection.query(selectAllWeather_QUERY,(err,result) =>{
@@ -51,6 +53,20 @@ app.get('/data',(req,res)=>{
     });
 })
 
+
+// app.get('/data/check',(req,res)=>{
+//     const {city} =req.query;
+//     const checkIfFound_QUERY = `SELECT city FROM my_weather WHERE city='${city}'`;
+//     connection.query(checkIfFound_QUERY,(err,result) =>{
+//         if(err){
+//             return res.send(err);
+//         }else{
+//             return res.json({
+//                 data:result
+//             })
+//         }
+//     });
+// })
 app.listen(4000,() => {
     console.log
     ('iWeather server is listining on port 4000')
