@@ -10,9 +10,9 @@ import SuccessBar from './Containers/SuccessMsg';
 import ErrorBar from './Containers/ErrorMsg';
 
 
-const API_KEY = "7f179db624ffef7d2ca8439e0c01651c";
-
-
+//const API_KEY = "7f179db624ffef7d2ca8439e0c01651c";
+const API_ID = "W96O9zI7oI6bfsFDJPry"
+const API_CODE = "oy6_mMbmLmc3Q76-6dnoIg"
 
 class App extends React.Component {
 
@@ -40,7 +40,7 @@ class App extends React.Component {
       openF:false,
     }
   }
-
+/*
   componentDidMount(){
     this.getSavedWeather(); 
   }
@@ -52,7 +52,7 @@ class App extends React.Component {
       array:response.data
     }))
     .catch(err => console.error(err))
-  }
+  }*/
   
   addWeather = _=>{
     const city =this.state.city;
@@ -81,7 +81,8 @@ class App extends React.Component {
       const city= this.state.location.city;
       const country=this.state.location.country;
       const api_call =
-      await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+      await fetch(`https://weather.cit.api.here.com/weather/1.0/report.json?product=observation&name=${city}&app_id=${API_ID}&app_code=${API_CODE}`,
+      { mode: 'no-cors'});
       const data = await api_call.json();
       console.log(data);
       if(city&&country){

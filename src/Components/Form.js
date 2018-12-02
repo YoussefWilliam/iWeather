@@ -15,7 +15,6 @@ const Form = props =>(
                 name="country" 
                 onChange={props.changeHandler('country')}
                 placeholder="Country.."/>
-                <br/><br/>
             <Button
                 color="primary"
                 variant='contained'
