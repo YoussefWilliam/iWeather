@@ -24,7 +24,7 @@ console.log(connection);
 app.use(cors());
 
 app.get('/',(req,res)=>{
-    res.send('GO to iWeather server');
+    res.send('Hey there');
 });
 
 app.get('/data/add',(req,res) =>{
