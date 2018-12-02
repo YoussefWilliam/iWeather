@@ -12,8 +12,6 @@ import ErrorBar from './Containers/ErrorMsg';
 
 const API_KEY = "7f179db624ffef7d2ca8439e0c01651c";
 
-
-
 class App extends React.Component {
 
   constructor(props){
