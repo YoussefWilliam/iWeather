@@ -3,6 +3,18 @@ We will get through running the app and the tools needed for it.
 
 # Part 1: Tools needed
 
+#### For the Database:
+
+### Download and install xampp
+Xampp is an open source package that contains MariaDB that we use in the project<br>
+Simply it provide us a localhost and we can build a MySQL database,
+You can find the link here:[https://www.apachefriends.org/index.html]
+
+### Import Database
+After downloading Xampp, you can import the database of the project without creating a new one, just open [http://localhost/phpmyadmin]
+but make sure Xampp is activated with Apache and MySQL services are ON
+Then import the database and now it's ready.
+
 #### Install react on your device:
 
 ### `npm install react`
@@ -51,8 +63,26 @@ You will also see any lint errors in the console.
 
 # Part 3: Server Dependencies:
 
-### `nodemon index.js`
+### Front-end Dependencies:
+#### `react`   `react-dom`   `react-scripts`   `react-notifications`   `react-bootstrap`   `bootstrap`   `material-ui`  
+#### `material-ui/core`   `material-ui/icons`   `yarn`
+
+### Back-end Dependencies:
+#### `cors`  `express`  `mysql`  `nodemon`
+
+<h4>All of these dependencies are installed once the Dockerfile is run</h4>
+
+
 
 To run the server, open the index json file in the server forder and run this command on it, if everything went right with the connection with the local database on [localhost/phpmyadmin], the cmd will print <h3>iWeather server is listining on port 4000</h3> <br>
 After that you are good to go.
- 
+
+# Part 4: Docker:
+
+### `docker-compose up`
+In this command, we aim for running both dockerfiles of the project with different ports assigned to each of them in the file
+
+### Separate Dockerfile run
+We have two dockerfiles in the project, one for the frontend and the other for the server backend, all is run in one command but for seprate commands:
+#### First build:  `docker build -t <front/back end> .`
+#### Second run:  `docker run -p <3000/4000:3000/4000> <front/back end>`
