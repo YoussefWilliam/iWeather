@@ -40,14 +40,6 @@ class App extends React.Component {
   }
 
 
-  getSavedWeather = _ =>{
-    fetch('http://localhost:4000/data')
-    .then(response =>response.json())
-    .then(response =>this.setState({
-      array:response.data
-    }))
-    .catch(err => console.error(err))
-  }
 
   addWeather = _=>{
     const city =this.state.city;
