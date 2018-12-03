@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -63,32 +60,6 @@ class WeatherCards extends React.Component {
 
     return (
       <Card className={classes.card}>
-        {/* <CardHeader
-          avatar={
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              { this.props.country}
-            </Avatar>
-          }
-          title={ <h1>{this.props.city}</h1>}
-        />
-        
-        <CardContent>
-          <Typography component="p">
-          <h1>&emsp;&emsp;&emsp;&emsp;&emsp;{ this.props.temprature} &#8451;</h1>
-          </Typography>
-          <h4>&emsp;&emsp;&emsp;&emsp;&emsp;___________________________</h4>
-          <Typography component="p">
-          <subtitle1>Wind&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Humidity</subtitle1>
-          <h3>&nbsp;{ this.props.wind}
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          { this.props.humidity}%</h3>
-          </Typography>
-          <h4>&emsp;&emsp;&emsp;&emsp;&emsp;___________________________</h4>
-          <Typography component="p">
-          <subtitle1>Description</subtitle1>
-          <h3>&nbsp;{ this.props.description}</h3>
-          </Typography>
-        </CardContent> */}
         <div className={classes.root}>
         <Grid container spacing={12}>
         <Grid item xs={12}>
