@@ -5,7 +5,6 @@ import './App.css';
 import './view.css';
 import Weather from './Components/Weather';
 import Database from './Components/Database';
-import SelectedListItem from './Components/Lists';
 import SuccessBar from './Containers/SuccessMsg';
 import ErrorBar from './Containers/ErrorMsg';
 
