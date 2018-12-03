@@ -22,31 +22,4 @@ class SelectedListItem extends React.Component {
   
  
 
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-<Divider/>
-        <List component="nav">
-          <ListItem
-            button
-          >
-            <ListItemText primary={this.props.primary} />
-           <h3> &#8451;</h3>
-          </ListItem>
-          <Divider/>
-
-        </List>
-        <Divider/>
-        
-      </div>
-    );
-  }
-}
-
-SelectedListItem.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(SelectedListItem);
+ 
