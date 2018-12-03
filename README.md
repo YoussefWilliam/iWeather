@@ -61,4 +61,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-// ADD THE FILES BELOW THIS COMMENT AND DELETE THIS COMMENT AFTER
+# Part 3: Server Dependencies:
+
+### Front-end Dependencies:
+#### `react`   `react-dom`   `react-scripts`   `react-notifications`   `react-bootstrap`   `bootstrap`   `material-ui`  
+#### `material-ui/core`   `material-ui/icons`   `yarn`
+
+### Back-end Dependencies:
+#### `cors`  `express`  `mysql`  `nodemon`
+
+<h4>All of these dependencies are installed once the Dockerfile is run</h4>
+
+
+
+To run the server, open the index json file in the server forder and run this command on it, if everything went right with the connection with the local database on [localhost/phpmyadmin], the cmd will print <h3>iWeather server is listining on port 4000</h3> <br>
+After that you are good to go.
+
+# Part 4: Docker:
+
+### `docker-compose up`
+In this command, we aim for running both dockerfiles of the project with different ports assigned to each of them in the file
+
+### Separate Dockerfile run
+We have two dockerfiles in the project, one for the frontend and the other for the server backend, all is run in one command but for seprate commands:
+#### First build:  `docker build -t <front/back end> .`
+#### Second run:  `docker run -p <3000/4000:3000/4000> <front/back end>`
