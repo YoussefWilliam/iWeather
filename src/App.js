@@ -130,8 +130,11 @@ class App extends React.Component {
   renderWeather = ({_id,city,country,temprature})  =>
     
   <div key={_id}>
-  <SelectedListItem
-    primary={`${city},${country},${temprature}`}/>
+  <Database
+    country={`${country}`}
+    city={`${city}`}
+    temprature={`${temprature}`}
+   />
   </div>
 
   render() {
@@ -174,8 +177,9 @@ class App extends React.Component {
                 />
           </div>
           <div className="column">
-                <Database />
+                
                 {this.state.array.map(this.renderWeather)}
+               
             </div>
         </div>
        </div>
