@@ -12,45 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 
-const styles = theme => ({
-    card: {
-      maxWidth: 400,
-      background:'transparent',
-    },
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      background: 'transparent',
-      padding: theme.spacing.unit,
-      textAlign: 'center',
-      color: theme.palette.text.primary,
-      
-    },
-    media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
-    },
-    actions: {
-      display: 'flex',
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-      marginLeft: 'auto',
-      [theme.breakpoints.up('sm')]: {
-        marginRight: -8,
-      },
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-  });
+
 
   
 class Database extends React.Component{
