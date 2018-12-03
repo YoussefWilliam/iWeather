@@ -51,7 +51,7 @@ class App extends React.Component {
     }))
     .catch(err => console.error(err))
   }
-  
+
   addWeather = _=>{
     const city =this.state.city;
     const country=this.state.country;

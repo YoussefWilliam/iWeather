@@ -7,10 +7,23 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   card: {
     maxWidth: 400,
+    background:'transparent',
+  },
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    background: 'transparent',
+    padding: theme.spacing.unit,
+    textAlign: 'center',
+    color: theme.palette.text.primary,
+    
   },
   media: {
     height: 0,
@@ -50,33 +63,70 @@ class WeatherCards extends React.Component {
 
     return (
       <Card className={classes.card}>
-        <CardHeader
+        {/* <CardHeader
           avatar={
             <Avatar aria-label="Recipe" className={classes.avatar}>
               { this.props.country}
             </Avatar>
           }
-          title={ this.props.city}
+          title={ <h1>{this.props.city}</h1>}
         />
         
         <CardContent>
           <Typography component="p">
-          <h1>{ this.props.temprature} &#8451;</h1>
+          <h1>&emsp;&emsp;&emsp;&emsp;&emsp;{ this.props.temprature} &#8451;</h1>
           </Typography>
-        </CardContent>
-
-        <CardContent>
+          <h4>&emsp;&emsp;&emsp;&emsp;&emsp;___________________________</h4>
           <Typography component="p">
-          <h2>Wind:{ this.props.wind} </h2>
+          <subtitle1>Wind&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Humidity</subtitle1>
+          <h3>&nbsp;{ this.props.wind}
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          { this.props.humidity}%</h3>
           </Typography>
+          <h4>&emsp;&emsp;&emsp;&emsp;&emsp;___________________________</h4>
           <Typography component="p">
-          <h4> Humidity:{ this.props.humidity}</h4>
+          <subtitle1>Description</subtitle1>
+          <h3>&nbsp;{ this.props.description}</h3>
           </Typography>
-            <h3>Description:</h3>
-            <Typography paragraph>
-              <h4> { this.props.description}</h4>
-            </Typography>
-        </CardContent>
+        </CardContent> */}
+        <div className={classes.root}>
+        <Grid container spacing={12}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <Avatar aria-label="Recipe" className={classes.avatar}>
+              { this.props.country}
+            </Avatar>
+            <h1>{this.props.city}</h1>
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+          <h1>{ this.props.temprature}&#8451;</h1>
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>
+          Wind
+          <br></br>
+          <h4>{ this.props.wind}</h4>
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>
+          Humidity
+          <br></br>
+          <h4>{ this.props.humidity}</h4>
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>
+          Description
+          <br></br>
+          <h4>{ this.props.description}</h4>
+          </Paper>
+        </Grid>
+      </Grid>
+      </div>
       </Card>
     );
   }
