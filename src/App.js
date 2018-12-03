@@ -39,9 +39,6 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount(){
-    this.getSavedWeather(); 
-  }
 
   getSavedWeather = _ =>{
     fetch('http://localhost:4000/data')
