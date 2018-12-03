@@ -86,7 +86,7 @@ class WeatherCards extends React.Component {
           <Paper className={classes.paper}>
           Humidity
           <br></br>
-          <h4>{ this.props.humidity}</h4>
+          <h4>{ this.props.humidity} &#37;</h4>
           </Paper>
         </Grid>
         <Grid item xs={6}>
