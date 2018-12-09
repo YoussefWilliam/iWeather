@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #Decide which port to run on
-EXPOSE 4001
+EXPOSE 4000
 
 #Start the backend
 CMD ["node","index.js"]
