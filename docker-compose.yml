@@ -2,8 +2,6 @@ version: '3'
 services:
   backend:
     build: ./server
-    ports: 
-      - '4001:4001'
   frontend:
     build: .
     ports: 
