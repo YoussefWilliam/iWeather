@@ -5,7 +5,6 @@ import './App.css';
 import './view.css';
 import Weather from './Components/Weather';
 import Database from './Components/Database';
-import SelectedListItem from './Components/Lists';
 import SuccessBar from './Containers/SuccessMsg';
 import ErrorBar from './Containers/ErrorMsg';
 
@@ -85,7 +84,6 @@ class App extends React.Component {
       if(city&&country){
         this.setState({
           temprature:data.main.temp,
-          //status:"Success! Here are the results",
           city:data.name,
           country:data.sys.country,
           wind:data.wind.speed,

@@ -53,20 +53,6 @@ app.get('/data',(req,res)=>{
     });
 })
 
-
-// app.get('/data/check',(req,res)=>{
-//     const {city} =req.query;
-//     const checkIfFound_QUERY = `SELECT city FROM my_weather WHERE city='${city}'`;
-//     connection.query(checkIfFound_QUERY,(err,result) =>{
-//         if(err){
-//             return res.send(err);
-//         }else{
-//             return res.json({
-//                 data:result
-//             })
-//         }
-//     });
-// })
 app.listen(4000,() => {
     console.log
     ('iWeather server is listining on port 4000')

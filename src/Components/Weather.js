@@ -4,8 +4,7 @@ import WeatherCards from './Cards';
 const Weather = props =>( 
 
     <div>
-        <p>  </p>
-        
+        <p />
     {
         props.temprature &&
             <WeatherCards
